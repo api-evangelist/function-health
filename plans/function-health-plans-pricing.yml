@@ -1,0 +1,88 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Function Health
+providerId: function-health
+created: '2026-06-20'
+modified: '2026-06-20'
+reconciled: true
+tags:
+- Health
+- Longevity
+- Lab Testing
+- Biomarkers
+- Preventive Health
+- Consumer Health
+- Plans
+description: >-
+  Function Health sells a single consumer membership rather than API plans, since
+  it does not offer a developer API. The membership is a flat annual subscription
+  that covers 100+ lab biomarkers tested twice a year via Quest Diagnostics,
+  clinician review, biological age, and a personalized action plan. Optional
+  clinical add-ons (whole-body MRI, CT, multi-cancer screening, etc.) are priced
+  separately. Pricing here is reconciled against Function's public pricing pages
+  but reflects consumer membership cost, not metered API usage.
+notes: >-
+  Function Health has publicly lowered membership pricing over time (previously
+  $499/year, with a widely promoted $365/year rate); promotional discount codes
+  and HSA/FSA eligibility can reduce the effective cost. Add-on prices are not
+  fully published on the main pricing page. Verify current pricing at
+  functionhealth.com/pricing on reconciliation. No API pricing exists because no
+  public API is offered.
+sources:
+- https://www.functionhealth.com/pricing
+- https://www.functionhealth.com/article/function365
+- https://www.functionhealth.com/faqs/how-much-does-function-cost
+plans:
+- id: function-health-membership
+  name: Function Membership
+  type: subscription
+  description: >-
+    Annual consumer membership covering 100+ lab tests twice per year via Quest
+    Diagnostics, clinician-reviewed results, biological age, trend tracking, AI
+    health companion, and a personalized action plan. No insurance required;
+    HSA/FSA eligible.
+  entries:
+  - label: Annual Membership
+    name: annual_membership
+    type: flat
+    metric: subscription
+    limit: 1
+    timeFrame: year
+    geo: us
+    unit: 1
+    price: $365-$499 per year (promotional and renewal rates vary)
+    userMultiplied: true
+  elements:
+  - name: 100+ Lab Biomarkers (2x per year)
+  - name: Clinician Review
+  - name: Biological Age
+  - name: Trend Tracking Across Rounds
+  - name: AI Health Companion
+  - name: Personalized Action Plan
+- id: function-health-add-ons
+  name: Clinical Add-Ons
+  type: usage
+  description: >-
+    Optional advanced clinical tests available to members at additional cost,
+    such as whole-body MRI, CT scans, and multi-cancer early detection (Galleri).
+    Pricing is quoted in-product and not fully published.
+  entries:
+  - label: Advanced Add-Ons (MRI / CT / Galleri / etc.)
+    name: add_ons
+    type: usage
+    metric: tests
+    limit: -1
+    timeFrame: usage
+    geo: us
+    unit: 1
+    price: additional cost; see in-product pricing
+    userMultiplied: true
+  elements:
+  - name: Whole-Body MRI
+  - name: CT Scan
+  - name: Galleri Multi-Cancer Test
+  - name: Additional Advanced Panels
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

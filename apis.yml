@@ -1,0 +1,112 @@
+aid: function-health
+url: https://raw.githubusercontent.com/api-evangelist/function-health/refs/heads/main/apis.yml
+name: Function Health
+kind: company
+description: Function Health is a consumer longevity and preventive-health membership
+  that runs 100+ lab biomarkers twice a year through Quest Diagnostics, adds clinician
+  review, a biological age calculation, and an AI health companion via a web and mobile
+  dashboard. As of this catalog Function Health does not publish a public or partner
+  developer API; member data is accessed through the member dashboard, PDF export,
+  in-product Connected Apps (wearable sync), and an opt-in ChatGPT app that shares a
+  high-level summary of results.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Health
+- Longevity
+- Lab Testing
+- Biomarkers
+- Preventive Health
+- Consumer Health
+created: '2026-06-20'
+modified: '2026-06-20'
+specificationVersion: '0.19'
+apis:
+- aid: function-health:function-health-member-dashboard
+  name: Function Health Member Dashboard
+  tags:
+  - Lab Results
+  - Biomarkers
+  - Dashboard
+  - Consumer Health
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://my.functionhealth.com
+  properties:
+  - url: https://www.functionhealth.com
+    type: Website
+  - url: https://my.functionhealth.com/documents
+    type: SignUp
+  - url: openapi/function-health-openapi.yml
+    type: OpenAPI
+  description: Authenticated member web and mobile dashboard for viewing 100+ lab
+    biomarkers, trends across testing rounds, clinician notes, biological age, and
+    a personalized action plan. There is no documented public API behind the
+    dashboard; access is interactive only.
+- aid: function-health:function-health-results-export
+  name: Function Health Results Export
+  tags:
+  - Export
+  - PDF
+  - Lab Results
+  - Data Portability
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://my.functionhealth.com/documents
+  properties:
+  - url: https://my.functionhealth.com/documents
+    type: Documentation
+  - url: openapi/function-health-openapi.yml
+    type: OpenAPI
+  description: Member-initiated PDF export of lab results from the documents area of
+    the dashboard. This is a manual download for data portability, not a
+    programmatic API; third-party trackers import the resulting PDF.
+- aid: function-health:function-health-connected-apps
+  name: Function Health Connected Apps
+  tags:
+  - Integrations
+  - Wearables
+  - Connected Apps
+  - Data Sync
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.functionhealth.com/faqs/does-function-integrate-with-oura-fitbit-apple-health-or-other-health-services
+  properties:
+  - url: https://www.functionhealth.com/faqs/does-function-integrate-with-oura-fitbit-apple-health-or-other-health-services
+    type: Documentation
+  - url: openapi/function-health-openapi.yml
+    type: OpenAPI
+  description: In-product Connected Apps let members link supported consumer health
+    services (e.g. wearables and Apple Health) to sync data into Function. These are
+    pre-built, member-authorized integrations configured in the app, not a developer
+    API that third parties can build against.
+- aid: function-health:function-health-chatgpt-app
+  name: Function Health ChatGPT App
+  tags:
+  - ChatGPT
+  - AI
+  - Data Sharing
+  - Member Authorized
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.functionhealth.com
+  properties:
+  - url: https://clpmag.com/lab-essentials/information-technology/function-health-integrates-lab-data-chatgpt-app/
+    type: Documentation
+  - url: openapi/function-health-openapi.yml
+    type: OpenAPI
+  description: An opt-in app within ChatGPT through which a member can authorize
+    secure access to a limited, high-level summary of their lab results, with the
+    ability to revoke access at any time. Surfaced through the ChatGPT app ecosystem;
+    Function does not document a standalone public API for it.
+common:
+- type: LinkedIn
+  url: https://www.linkedin.com/company/function-health
+- type: Website
+  url: https://www.functionhealth.com
+- type: Documentation
+  url: https://www.functionhealth.com/faqs
+- type: Plans
+  url: plans/function-health-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/function-health-rate-limits.yml
+- type: FinOps
+  url: finops/function-health-finops.yml
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

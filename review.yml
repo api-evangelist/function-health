@@ -1,0 +1,99 @@
+aid: function-health
+name: Function Health
+review:
+  question: Does Function Health expose a documented public, partner, or developer API?
+  answer: false
+  date: '2026-06-20'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No streaming, WebSocket, or Server-Sent Events surface is documented by
+    Function Health, so no AsyncAPI document was created. Function Health is a
+    consumer membership product with no published programmatic API of any
+    transport.
+findings:
+  summary: |
+    Function Health does not publish a public, partner, or developer API as of
+    the review date. It is a direct-to-consumer longevity and preventive-health
+    membership that runs 100+ lab biomarkers twice a year through Quest
+    Diagnostics, adds clinician review, biological age, and an AI health
+    companion, all surfaced through an authenticated member web and mobile
+    dashboard at my.functionhealth.com.
+
+    Member data access is interactive and consumer-facing only. The documented
+    ways to get data out are: (1) viewing results in the member dashboard, (2) a
+    manual PDF export from my.functionhealth.com/documents that third-party
+    trackers (Empirical, Health3, etc.) import, (3) in-product Connected Apps
+    that let a member authorize sync with supported consumer health services and
+    wearables (e.g. Apple Health, Oura, Fitbit), and (4) an opt-in app within
+    ChatGPT through which a member can authorize ChatGPT to access a limited,
+    high-level summary of their results, revocable at any time.
+
+    None of these is a documented developer API. The Connected Apps and ChatGPT
+    integrations are pre-built, member-authorized data shares configured inside
+    Function's own products, not endpoints third parties can build against. No
+    public developer portal, API reference, base URL, authentication scheme, or
+    SDK is published. A community MCP/CLI project that previously scraped the
+    member session was not reachable at review time and, regardless, would rely
+    on an undocumented internal interface rather than a supported public API.
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: No public REST API base URL or reference is documented by Function Health.
+    - protocol: SSE
+      scheme: https
+      documented: false
+      note: No Server-Sent Events streaming surface is documented.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket surface is documented.
+  endpointsConfirmedRest: []
+  dataAccessSurfaces:
+    - name: Member Dashboard
+      url: https://my.functionhealth.com
+      type: Interactive
+      note: Authenticated web/mobile UI for viewing biomarkers, trends, clinician notes, biological age. No documented API.
+    - name: Results PDF Export
+      url: https://my.functionhealth.com/documents
+      type: Manual Export
+      note: Member-initiated PDF download for data portability; imported by third-party trackers.
+    - name: Connected Apps
+      url: https://www.functionhealth.com/faqs/does-function-integrate-with-oura-fitbit-apple-health-or-other-health-services
+      type: Pre-built Integration
+      note: Member-authorized sync with supported consumer health apps/wearables; not a developer API.
+    - name: ChatGPT App
+      url: https://clpmag.com/lab-essentials/information-technology/function-health-integrates-lab-data-chatgpt-app/
+      type: Member-Authorized Data Share
+      note: Opt-in ChatGPT app sharing a high-level summary of results; revocable. No standalone public API documented.
+sources:
+  - url: https://www.functionhealth.com
+    type: Website
+    note: Marketing and member sign-in; no developer or API section.
+  - url: https://www.functionhealth.com/faqs
+    type: Documentation
+    note: Consumer FAQs cover membership, testing, and connected apps; no API documentation.
+  - url: https://www.functionhealth.com/faqs/does-function-integrate-with-oura-fitbit-apple-health-or-other-health-services
+    type: Documentation
+    note: Describes in-product Connected Apps for wearable/health-app sync; no developer API.
+  - url: https://clpmag.com/lab-essentials/information-technology/function-health-integrates-lab-data-chatgpt-app/
+    type: Article
+    note: Reports the opt-in ChatGPT app sharing a high-level summary of lab results; member-authorized and revocable.
+  - url: https://my.functionhealth.com/documents
+    type: Documentation
+    note: Member documents area where lab results can be downloaded as PDF for export.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No public, partner, or developer API exists. The catalog documents Function
+    Health honestly as a consumer membership product: apis.yml lists the
+    member-facing data access surfaces (dashboard, export, connected apps,
+    ChatGPT app) with human URLs, the OpenAPI document is intentionally pathless,
+    and the plans artifact captures real public membership pricing (reconciled
+    true). Rate-limits and FinOps are marked reconciled false because there is no
+    metered API to limit or bill. Reconcile if Function Health publishes an API.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

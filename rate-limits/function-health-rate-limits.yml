@@ -1,0 +1,44 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: Function Health
+providerId: function-health
+created: '2026-06-20'
+modified: '2026-06-20'
+reconciled: false
+tags:
+- Health
+- Longevity
+- Lab Testing
+- Biomarkers
+- Consumer Health
+- Rate Limiting
+- Quotas
+- Throttling
+description: >-
+  Function Health does not publish a public or developer API, so no API rate
+  limits, quotas, or throttling policies are documented. The closest operational
+  limits are product cadence limits on the consumer membership (lab testing
+  scheduled twice per year, with on-demand add-on tests) rather than
+  request-per-minute API throttles. There are no documented HTTP rate-limit
+  headers or 429 throttling responses to reconcile.
+notes: >-
+  If Function Health publishes a developer or partner API in the future, this
+  artifact should be reconciled with real RPM/RPD/quota values and any
+  Retry-After / 429 behavior. Until then there is nothing programmatic to limit.
+sources:
+- https://www.functionhealth.com/faqs
+- https://www.functionhealth.com/pricing
+responseCodes: {}
+limits:
+- name: Lab Testing Cadence
+  scope: member
+  metric: lab_rounds
+  limit: 2 per year (plus on-demand add-ons)
+  notes: Product cadence, not an API rate limit. Comprehensive testing is run twice per membership year.
+policies:
+- name: No Public API
+  description: No developer API is offered, so no API-level rate limiting, quotas, or throttling apply.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

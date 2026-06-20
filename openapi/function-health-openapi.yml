@@ -1,0 +1,25 @@
+openapi: 3.0.1
+info:
+  title: Function Health API
+  description: >-
+    Function Health is a consumer longevity and preventive-health membership.
+    As of this catalog Function Health does not publish a public, partner, or
+    developer API. Member lab data is accessed only through the authenticated
+    member dashboard (my.functionhealth.com), a manual PDF export, in-product
+    Connected Apps for member-authorized wearable sync, and an opt-in ChatGPT
+    app that shares a high-level summary of results. This OpenAPI document is
+    intentionally pathless: no programmatic HTTP endpoints are documented by
+    the provider, so none are asserted here. It exists as a placeholder so the
+    catalog remains consistent and can be reconciled if Function Health
+    publishes an API in the future.
+  termsOfService: https://www.functionhealth.com/legal
+  contact:
+    name: Function Health
+    url: https://www.functionhealth.com
+  version: '0.0'
+servers:
+  - url: https://www.functionhealth.com
+    description: Function Health marketing and member sign-in site. No documented API base path.
+paths: {}
+components:
+  schemas: {}

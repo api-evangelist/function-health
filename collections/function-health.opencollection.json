@@ -1,0 +1,9 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Function Health API",
+    "version": "0.0",
+    "description": "Function Health does not publish a public, partner, or developer API. This collection is intentionally minimal: there are no programmatic endpoints to call. Member data is accessed only through the authenticated dashboard (my.functionhealth.com), a manual PDF export, in-product Connected Apps, and an opt-in ChatGPT app. See README.md and review.yml in this repository for details."
+  },
+  "items": []
+}

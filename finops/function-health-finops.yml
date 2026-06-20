@@ -1,0 +1,85 @@
+specification: FinOps Framework
+specificationVersion: '1.0'
+schema: https://www.finops.org/framework/
+provider: Function Health
+providerId: function-health
+created: '2026-06-20'
+modified: '2026-06-20'
+reconciled: false
+tags:
+- Health
+- Longevity
+- Lab Testing
+- Biomarkers
+- Consumer Health
+- FinOps
+- Cost Management
+- FOCUS
+description: >-
+  FinOps view of Function Health spend. Function Health is a consumer membership
+  product, not a usage-metered API, so there is no per-call or per-token billing
+  to manage. Cost is a flat annual subscription per member plus optional
+  clinical add-ons (MRI, CT, Galleri, etc.). There are no API meters, usage
+  exports, or FOCUS-aligned billing dimensions because no public API is offered.
+  This artifact is unreconciled at the API level and documents the consumer
+  billing model only.
+notes: >-
+  Membership pricing has changed over time (previously $499/year, with a promoted
+  $365/year rate) and add-on pricing is quoted in-product. If a developer or
+  partner API with usage-based billing is launched, reconcile this artifact with
+  real meters and FOCUS columns. Verify current consumer pricing at
+  functionhealth.com/pricing.
+sources:
+- https://www.functionhealth.com/pricing
+- https://www.functionhealth.com/faqs/how-much-does-function-cost
+- https://focus.finops.org/focus-specification/v1-3/
+alignedWith:
+  framework: FinOps Foundation Framework
+  frameworkUrl: https://www.finops.org/framework/
+  dataSpec: FOCUS
+  dataSpecVersion: '1.3'
+  dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
+publisherName: Function Health
+serviceCategory: Healthcare
+billingModel:
+  pricingCategory: Subscription-Based
+  billingFrequency: Annually
+  billingCurrency: USD
+  chargeCategories:
+  - Purchase
+  - Usage
+focusColumns:
+  ServiceName: Function Membership
+  ServiceCategory: Healthcare
+  ProviderName: Function Health
+  PublisherName: Function Health
+  InvoiceIssuerName: Function Health
+  BillingCurrency: USD
+  ChargeCategory: Purchase
+  PricingCategory: Subscription-Based
+meters:
+- name: annual_membership
+  description: Flat annual consumer membership fee per member.
+  unit: subscription
+  aggregation: sum
+  dimensions:
+  - member
+- name: clinical_add_ons
+  description: Optional advanced clinical tests (MRI, CT, Galleri, etc.) billed per add-on.
+  unit: tests
+  aggregation: sum
+  dimensions:
+  - member
+  - add_on
+principles:
+- name: Visibility
+  description: Track membership renewal cost and any add-on purchases per member; no API usage exports exist.
+- name: Allocation
+  description: Attribute the flat membership and add-on costs to the individual member or HSA/FSA account.
+- name: Optimization
+  description: Use promotional discount codes and HSA/FSA pre-tax eligibility to reduce effective membership cost; add only clinically warranted add-ons.
+- name: Accountability
+  description: Review renewal annually against perceived value; there is no metered API spend to govern.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
