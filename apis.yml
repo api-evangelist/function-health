@@ -34,7 +34,7 @@ apis:
   - url: https://www.functionhealth.com
     type: Website
   - url: https://my.functionhealth.com/documents
-    type: SignUp
+    type: Signup
   - url: openapi/function-health-openapi.yml
     type: OpenAPI
   description: Authenticated member web and mobile dashboard for viewing 100+ lab
