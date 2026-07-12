@@ -95,6 +95,10 @@ apis:
     ability to revoke access at any time. Surfaced through the ChatGPT app ecosystem;
     Function does not document a standalone public API for it.
 common:
+- type: TrustCenter
+  url: security/function-health-trust-center.yml
+- type: DomainSecurity
+  url: security/function-health-domain-security.yml
 - type: LinkedIn
   url: https://www.linkedin.com/company/function-health
 - type: Website
