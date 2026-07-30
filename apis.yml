@@ -9,7 +9,19 @@ description: Function Health is a consumer longevity and preventive-health membe
   developer API; member data is accessed through the member dashboard, PDF export,
   in-product Connected Apps (wearable sync), and an opt-in ChatGPT app that shares a
   high-level summary of results.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: paid
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Paid
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/function-health.png
 tags:
 - Health
 - Longevity
