@@ -1,0 +1,14 @@
+{
+  "provider": "function-health",
+  "sources": [
+    "function-health-openapi.yml"
+  ],
+  "outputs": [],
+  "archived": [
+    "archived function-health-openapi.yml"
+  ],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
