@@ -47,7 +47,7 @@ apis:
     type: Website
   - url: https://my.functionhealth.com/documents
     type: Signup
-  - url: openapi/function-health-openapi.yml
+  - url: openapi/_original/function-health-openapi.yml
     type: OpenAPI
   description: Authenticated member web and mobile dashboard for viewing 100+ lab
     biomarkers, trends across testing rounds, clinician notes, biological age, and
@@ -65,7 +65,7 @@ apis:
   properties:
   - url: https://my.functionhealth.com/documents
     type: Documentation
-  - url: openapi/function-health-openapi.yml
+  - url: openapi/_original/function-health-openapi.yml
     type: OpenAPI
   description: Member-initiated PDF export of lab results from the documents area of
     the dashboard. This is a manual download for data portability, not a
@@ -82,7 +82,7 @@ apis:
   properties:
   - url: https://www.functionhealth.com/faqs/does-function-integrate-with-oura-fitbit-apple-health-or-other-health-services
     type: Documentation
-  - url: openapi/function-health-openapi.yml
+  - url: openapi/_original/function-health-openapi.yml
     type: OpenAPI
   description: In-product Connected Apps let members link supported consumer health
     services (e.g. wearables and Apple Health) to sync data into Function. These are
@@ -100,7 +100,7 @@ apis:
   properties:
   - url: https://clpmag.com/lab-essentials/information-technology/function-health-integrates-lab-data-chatgpt-app/
     type: Documentation
-  - url: openapi/function-health-openapi.yml
+  - url: openapi/_original/function-health-openapi.yml
     type: OpenAPI
   description: An opt-in app within ChatGPT through which a member can authorize
     secure access to a limited, high-level summary of their lab results, with the
