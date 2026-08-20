@@ -73,6 +73,11 @@ apis:
 - aid: function-health:function-health-connected-apps
   name: Function Health Connected Apps
   tags:
+  - Integration
+  - Wearables
+  - Connected Apps
+  - Data Sync
+  tags_raw:
   - Integrations
   - Wearables
   - Connected Apps
@@ -91,6 +96,11 @@ apis:
 - aid: function-health:function-health-chatgpt-app
   name: Function Health ChatGPT App
   tags:
+  - ChatGPT
+  - Artificial Intelligence
+  - Data Sharing
+  - Member Authorized
+  tags_raw:
   - ChatGPT
   - AI
   - Data Sharing
