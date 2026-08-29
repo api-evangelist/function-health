@@ -9,6 +9,17 @@ description: Function Health is a consumer longevity and preventive-health membe
   developer API; member data is accessed through the member dashboard, PDF export,
   in-product Connected Apps (wearable sync), and an opt-in ChatGPT app that shares a
   high-level summary of results.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: paid
   onboarding: unknown
