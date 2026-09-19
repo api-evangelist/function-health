@@ -49,6 +49,11 @@ apis:
   tags:
   - Lab Results
   - Biomarkers
+  - Dashboards
+  - Consumer Health
+  tags_raw:
+  - Lab Results
+  - Biomarkers
   - Dashboard
   - Consumer Health
   image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
