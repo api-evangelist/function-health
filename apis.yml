@@ -41,7 +41,7 @@ tags:
 - Preventive Health
 - Consumer Health
 created: '2026-06-20'
-modified: '2026-06-20'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 apis:
 - aid: function-health:function-health-member-dashboard
@@ -133,6 +133,8 @@ apis:
     ability to revoke access at any time. Surfaced through the ChatGPT app ecosystem;
     Function does not document a standalone public API for it.
 common:
+- url: https://www.functionhealth.com/newsroom
+  type: Blog
 - type: TrustCenter
   url: security/function-health-trust-center.yml
 - type: DomainSecurity
