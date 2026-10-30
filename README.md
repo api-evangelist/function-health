@@ -1,4 +1,4 @@
-# Function Health (function-health)
+# Function Health
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,117 +66,111 @@
 
 Function Health is a consumer longevity and preventive-health membership that runs 100+ lab biomarkers twice a year through Quest Diagnostics, adds clinician review, a biological age calculation, and an AI health companion via a web and mobile dashboard. As of this catalog Function Health does not publish a public or partner developer API; member data is accessed through the member dashboard, PDF export, in-product Connected Apps (wearable sync), and an opt-in ChatGPT app that shares a high-level summary of results.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/function-health/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/function-health/refs/heads/main/apis.yml)
+**Areas:** Health · Longevity · Lab Testing · Biomarkers · Preventive Health · Consumer Health
 
-> Note: No public or developer API is documented by Function Health. The entries below describe member-facing data access surfaces (dashboard, export, connected apps, ChatGPT app). The OpenAPI document carries no paths because no programmatic endpoints are published. See [review.yml](review.yml) for the full assessment.
+## Function Health on APIs.io
 
-## Tags
+Everything profiled for Function Health is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/function-health/](https://apis.io/providers/function-health/)** — or go straight to one of the APIs or properties below.
 
-- Health
-- Longevity
-- Lab Testing
-- Biomarkers
-- Preventive Health
-- Consumer Health
+### APIs (4)
 
-## Timestamps
+- [Function Health Member Dashboard](https://apis.io/apis/function-health/function-health-member-dashboard/) — Authenticated member web and mobile dashboard for viewing 100+ lab biomarkers, trends across testing rounds, clinician notes, biological age, and a…
+- [Function Health Results Export](https://apis.io/apis/function-health/function-health-results-export/) — Member-initiated PDF export of lab results from the documents area of the dashboard. This is a manual download for data portability, not a programmatic API;…
+- [Function Health Connected Apps](https://apis.io/apis/function-health/function-health-connected-apps/) — In-product Connected Apps let members link supported consumer health services (e.g. wearables and Apple Health) to sync data into Function. These are…
+- [Function Health ChatGPT App](https://apis.io/apis/function-health/function-health-chatgpt-app/) — An opt-in app within ChatGPT through which a member can authorize secure access to a limited, high-level summary of their lab results, with the ability to…
 
-- **Created:** 2026-06-20
-- **Modified:** 2026-06-20
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### Function Health Member Dashboard
+#### Collections (1)
 
-Authenticated member web and mobile dashboard for viewing 100+ lab biomarkers, trends across testing rounds, clinician notes, biological age, and a personalized action plan. There is no documented public API behind the dashboard; access is interactive only.
+Postman and Open Collection request collections.
 
-- **Human URL:** [https://my.functionhealth.com](https://my.functionhealth.com)
+- [Function Health API](https://apis.io/collections/function-health/open-function-health/)
 
-#### Tags
+#### Security (2)
 
-- Lab Results
-- Biomarkers
-- Dashboard
-- Consumer Health
+Authentication, trust centre, and vulnerability disclosure.
 
-#### Properties
+- [Function Health Domain Security](https://apis.io/security/function-health/function-health-domain-security/)
+- [Function Health Trust Center](https://apis.io/security/function-health/function-health-trust-center/)
 
-- [Website](https://www.functionhealth.com)
-- [Sign Up](https://my.functionhealth.com/documents)
-- [OpenAPI](openapi/function-health-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/function-health.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/function-health.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+#### Plans and pricing (1)
 
-### Function Health Results Export
+Published plans, tiers and prices.
 
-Member-initiated PDF export of lab results from the documents area of the dashboard. This is a manual download for data portability, not a programmatic API; third-party trackers import the resulting PDF.
+- [Function Health Plans Pricing](https://apis.io/plans/function-health/function-health-plans-pricing/)
 
-- **Human URL:** [https://my.functionhealth.com/documents](https://my.functionhealth.com/documents)
+#### Rate limits (1)
 
-#### Tags
+Published request limits.
 
-- Export
-- PDF
-- Lab Results
-- Data Portability
+- [Function Health Rate Limits](https://apis.io/rate-limits/function-health/function-health-rate-limits/)
 
-#### Properties
+#### FinOps (1)
 
-- [Documentation](https://my.functionhealth.com/documents)
-- [OpenAPI](openapi/function-health-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/function-health.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/function-health.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+What the API costs to run, by operation.
 
-### Function Health Connected Apps
+- [Function Health Finops](https://apis.io/finops/function-health/function-health-finops/)
 
-In-product Connected Apps let members link supported consumer health services (e.g. wearables and Apple Health) to sync data into Function. These are pre-built, member-authorized integrations configured in the app, not a developer API that third parties can build against.
+## Where to find this API
 
-- **Human URL:** [https://www.functionhealth.com/faqs/does-function-integrate-with-oura-fitbit-apple-health-or-other-health-services](https://www.functionhealth.com/faqs/does-function-integrate-with-oura-fitbit-apple-health-or-other-health-services)
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-#### Tags
-
-- Integrations
-- Wearables
-- Connected Apps
-- Data Sync
-
-#### Properties
-
-- [Documentation](https://www.functionhealth.com/faqs/does-function-integrate-with-oura-fitbit-apple-health-or-other-health-services)
-- [OpenAPI](openapi/function-health-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/function-health.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/function-health.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Function Health ChatGPT App
-
-An opt-in app within ChatGPT through which a member can authorize secure access to a limited, high-level summary of their lab results, with the ability to revoke access at any time. Surfaced through the ChatGPT app ecosystem; Function does not document a standalone public API for it.
-
-- **Human URL:** [https://www.functionhealth.com](https://www.functionhealth.com)
-
-#### Tags
-
-- ChatGPT
-- AI
-- Data Sharing
-- Member Authorized
-
-#### Properties
-
-- [Documentation](https://clpmag.com/lab-essentials/information-technology/function-health-integrates-lab-data-chatgpt-app/)
-- [OpenAPI](openapi/function-health-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/function-health.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/function-health.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
-
-- [LinkedIn](https://www.linkedin.com/company/function-health)
 - [Website](https://www.functionhealth.com)
 - [Documentation](https://www.functionhealth.com/faqs)
-- [Plans](plans/function-health-plans-pricing.yml)
-- [Rate Limits](rate-limits/function-health-rate-limits.yml)
-- [Fin Ops](finops/function-health-finops.yml)
+- [Blog](https://www.functionhealth.com/newsroom)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 19.8** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 25.1 |
+| Contract governance | 0.0 |
+| Operational transparency | 5.3 |
+| Developer ergonomics | 11.9 |
+| Access clarity | 26.3 |
+
+**Agent readiness 13.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 8.6** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/function-health/](https://apis.io/providers/function-health/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Function Health: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/function-health/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
